@@ -1,5 +1,5 @@
 
-apt install build-essential git vim xcb libxcb-uti10-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysymsl-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtestO-dev libxcb-shape0-dev 
+sudo apt install build-essential git vim xcb libxcb-uti10-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysymsl-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtestO-dev libxcb-shape0-dev 
 Posteriormente, aplicaremos una actualizaciOn del sistema con el comando 'apt update'. Acto seguido, teneis que dirigiros a la carpeta de descargas de vuestro equipo y descargar los proyectos 'bswpm' y 'sxhkd' con los siguientes comandos: 
 
 git clone https://github.com/baskerville/bspwm.git 
