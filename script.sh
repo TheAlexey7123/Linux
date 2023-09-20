@@ -20,6 +20,7 @@ cp color.ini kitty.conf ~/.config/kitty
 #https://www.gnome-look.org/p/https%3A%2F%2Fgithub.com%2Fshvchk%2Fpoly-dark%2Farchive%2Fmaster.zip
 
 #Fonts
+#Hack Nerd font
 cd
 cd Documentos
 mkdir hack
@@ -31,4 +32,18 @@ rm Hack.zip *.md -f
 sudo mv * /usr/share/fonts
 cd ..
 rm -rf hack/
-#end font
+
+#CaskaydiaCoveNerdFont
+cd ~/Documentos
+mkdir cascadia
+cd cascadia/
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/CascadiaCode.zip
+7z x CascadiaCode.zip
+sleep 1
+rm LICENSE *.md *.zip -f
+sudo mv * /usr/share/fonts
+cd ..
+rm -rf cascadia
+#end fonts
+
+
