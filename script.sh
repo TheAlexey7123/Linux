@@ -13,4 +13,4 @@ cp sxhkdrc ~/.config/sxhkd/sxhkdrc
 cp bspwmrc ~/.config/bspwm/bspwmrc
 mkdir ~/.config/kitty
 cp color.ini kitty.conf ~/.config/kitty
-https://www.gnome-look.org/p/https%3A%2F%2Fgithub.com%2Fshvchk%2Fpoly-dark%2Farchive%2Fmaster.zip
+#https://www.gnome-look.org/p/https%3A%2F%2Fgithub.com%2Fshvchk%2Fpoly-dark%2Farchive%2Fmaster.zip
