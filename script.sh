@@ -16,8 +16,11 @@ sleep 2
 cd ..
 rm -rf zsh-autocomplete
 
+#Wallpaper
+https://wallpapercave.com/wp/wp8148899.png
+
 #Download programs
-sudo apt install -y 7zip bspwm sxhkd rofi picom feh
+sudo apt install -y 7zip bspwm sxhkd rofi picom feh ranger
 
 #Update and upgrade
 sudo apt update
