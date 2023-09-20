@@ -11,7 +11,7 @@ cd ~/Descargas
 mkdir /usr/share/zsh-autocomplete/
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
 cd zsh-autocomplete/
-cp zsh-autocomplete.plugin.zsh /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+sudo cp zsh-autocomplete.plugin.zsh /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 sleep 2
 cd ..
 rm -rf zsh-autocomplete
