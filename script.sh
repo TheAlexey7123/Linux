@@ -24,6 +24,16 @@ sudo apt update
 sudo apt upgrade
 
 #kitty updated
+cd ~/Descargas
+mkdir kitty
+cd kitty
+wget https://github.com/kovidgoyal/kitty/releases/download/v0.30.0/kitty-0.30.0-x86_64.txz
+7z x kitty-0.30.0-x86_64.txz
+rm -f kitty-0.30.0-x86_64.txz
+tar -xf kitty-0.30.0-x86_64.tar
+rm -f kitty-0.30.0-x86_64.tar
+cd ..
+sudo mv kitty/ /opt/
 
 #picom:
 #cd ~/Descargas
