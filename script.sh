@@ -46,4 +46,12 @@ cd ..
 rm -rf cascadia
 #end fonts
 
+#lsd
+curl https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd_1.0.0_amd64.deb > lsd.deb
+sudo dpkg -i lsd.deb
 
+#batcat
+curl https://github.com/sharkdp/bat/releases/download/v0.23.0/bat_0.23.0_amd64.deb > bat.deb
+sudo dpkg -i bat.deb
+sleep 1
+rm *.deb
