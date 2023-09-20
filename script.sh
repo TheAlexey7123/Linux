@@ -3,10 +3,11 @@ sudo apt install -y make cmake-data pkg-config python3-sphinx libcairo2-dev libx
 sudo apt install -y meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev
 
 cd Descargas/Linux
+mkdir ~/.config/picom/picom.conf
 cp picom.conf ~/.config/picom/picom.conf
 mkdir ~/.config/bspwm
 mkdir ~/.config/bspwm/scripts
-cp bspwm_resize.txt ~/.config/bspwm/scripts/bspwm_resize
+cp bspwm_resize ~/.config/bspwm/scripts/bspwm_resize
 mkdir ~/.config/sxhkd
 cp sxhkdrc ~/.config/sxhkd/sxhkdrc
 cp bspwmrc ~/.config/bspwm/bspwmrc
