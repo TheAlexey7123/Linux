@@ -8,7 +8,7 @@ sudo apt install -y zsh-autosuggestions zsh-syntax-highlighting
 
 #plugin zsh autocomplete
 cd ~/Descargas
-mkdir /usr/share/zsh-autocomplete/
+sudo mkdir /usr/share/zsh-autocomplete/
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
 cd zsh-autocomplete/
 sudo cp zsh-autocomplete.plugin.zsh /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
