@@ -120,6 +120,8 @@ make -j$(nproc)
 sudo make install
 sleep 2
 rm -rf ~/Documentos/polybar
+
+#tema polybar blue-sky
 git clone https://github.com/VaughnValle/blue-sky.git
 cd blue-sky/
 cd polybar/
