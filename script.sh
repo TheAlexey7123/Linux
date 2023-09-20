@@ -35,8 +35,10 @@ rm -f kitty-0.30.0-x86_64.tar
 cd ..
 sudo mv kitty/ /opt/
 sudo su
-mkdir /home/root/.config/kitty/
-cp /home/alexey/.config/kitty/* /home/root/.config/kitty/
+cd
+mkdir .config/
+mkdir .config/kitty
+cp /home/alexey/.config/kitty/* .config/kitty/
 
 #picom:
 #cd ~/Descargas
