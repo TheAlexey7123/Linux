@@ -131,6 +131,10 @@ sudo cp * /usr/share/fonts/truetype
 fc-cache -v
 rm -rf ~/Documentos/blue-sky
 
+#nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+
 #p10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
