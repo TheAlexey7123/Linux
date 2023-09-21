@@ -20,7 +20,7 @@ rm -rf zsh-autocomplete
 https://wallpapercave.com/wp/wp8148899.png
 
 #Download programs
-sudo apt install -y 7zip bspwm sxhkd rofi picom feh ranger imagemagick
+sudo apt install -y 7zip bspwm sxhkd rofi picom feh ranger imagemagick wireshark
 
 #Update and upgrade
 sudo apt update
@@ -133,7 +133,13 @@ rm -rf ~/Documentos/blue-sky
 
 #nvim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+cd /opt/
 https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar -xf nvim-linux64.tar.gz
+rm -f nvim-linux64.tar.gz
+cd nvim-linux64/bin/
+./nvim
+#response: no
 
 #p10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
