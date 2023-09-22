@@ -1,0 +1,46 @@
+#Mirrorlist of Debian
+#/etc/apt/sources.list
+
+# deb cdrom:[Debian GNU/Linux 12.1.0 _Bookworm_ - Official amd64 NETINST with firmware 20230722-10:48]/ bookworm main non-free-firmware
+
+#kali:
+#deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
+#deb http://http.kali.org/kali kali-last-snapshot main contrib non-free non-free-firmware
+#deb http://http.kali.org/kali kali-experimental main contrib non-free non-free-firmware
+#deb http://http.kali.org/kali kali-bleeding-edge main contrib non-free non-free-firmware
+#deb-src http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
+
+deb https://deb.debian.org/debian/ stable main contrib non-free
+deb-src https://deb.debian.org/debian/ stable main contrib non-free
+
+#deb https://deb.debian.org/debian/ bullseye-updates main contrib
+#deb-src https://deb.debian.org/debian/ bullseye-updates main contrib
+
+deb https://deb.debian.org/debian/ stable-updates main contrib non-free
+deb-src https://deb.debian.org/debian/ stable-updates main contrib non-free
+#deb https://deb.debian.org/debian-security stable/updates main
+#deb-src https://deb.debian.org/debian-security stable/updates main
+#deb https://deb.debian.org/debian/ buster-backports main
+#deb-src https://deb.debian.org/debian/ buster-backports main
+
+#no
+#deb https://ftp.de.deb.debian.org/debian/ stretch main
+#deb https://dl.winehq.org/wine-builds/debian/ bullseye main
+
+deb https://deb.debian.org/debian/ bookworm main contrib non-free
+deb https://deb.debian.org/debian/ bookworm non-free-firmware
+deb-src https://deb.debian.org/debian/ bookworm main non-free-firmware non-free
+
+#deb https://deb.debian.org/debian/ bookworm-security main non-free-firmware non-free
+#deb-src https://deb.debian.org/debian/ bookworm-security main non-free-firmware non-free
+
+# bookworm-updates, to get updates before a point release is made;
+# see https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_updates_and_backports
+deb https://deb.debian.org/debian/ bookworm-updates main non-free-firmware non-free
+deb-src https://deb.debian.org/debian/ bookworm-updates main non-free-firmware non-free
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+# see the sources.list(5) manual.
