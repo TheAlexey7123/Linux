@@ -20,7 +20,7 @@ rm -rf zsh-autocomplete
 https://wallpapercave.com/wp/wp8148899.png
 
 #Download programs
-sudo apt install -y 7zip bspwm sxhkd rofi picom feh ranger imagemagick wireshark flameshot net-tools cmatrix neofetch
+sudo apt install -y 7zip bspwm sxhkd rofi picom feh ranger imagemagick wireshark flameshot net-tools cmatrix neofetch iputils-ping curl git sudo nano
 
 #Update and upgrade
 sudo apt update
