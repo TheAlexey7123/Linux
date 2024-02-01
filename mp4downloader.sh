@@ -37,7 +37,7 @@ i=0
 
 for linea in $(/bin/cat $videos 2>/dev/null); do
     let i=i+1
-    nombre="$(echo $linea | sed "s/%c2%a1/¡/g" | sed "s/%20/ /g" | sed "s/%c3%b3/o/g" | sed "s/%c3%a1/a/g")"
+    nombre="$(echo $linea | sed "s/%c2%a1/¡/g" | sed "s/%20/ /g" | sed "s/%c3%b3/o/g" | sed "s/%c2%a1/¿/g" | sed "s/%c2%bf/¿/g" | sed "s/%c3%b1/ñ/g | sed "s/%c3%a1/a/g")"
     echo -e "\n\t${redColour}[+] ${grayColour}Downloading .mp4 nº${redColour}$i${grayColour}: ${turquoiseColour}$nombre${redColour}\n"
     curl $url/$linea > "$nombre"
     echo -e "\n\t${redColour}[+] ${endColour}${grayColour}Downloaded .mp4 nº${redColour}$i${grayColour}: ${turquoiseColour}$nombre${endColour}\n"
