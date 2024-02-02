@@ -6,6 +6,9 @@ sudo apt install -y make cmake-data pkg-config python3-sphinx libcairo2-dev libx
 sudo apt install -y meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev
 sudo apt install -y zsh-autosuggestions zsh-syntax-highlighting
 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 #plugin zsh autocomplete
 cd ~/Descargas
 sudo mkdir /usr/share/zsh-autocomplete/
