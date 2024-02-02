@@ -17,11 +17,16 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-
 picom &
-feh --bg-scale /home/alexey/Imágenes/4k-Among-Trees-forest-trees-2185585.png
+#feh --bg-scale /home/alexey/Imágenes/minimalist-landscape.png
+#feh --bg-scale /home/alexey/Imágenes/hogwarts-legacy.jpg
+#feh --bg-scale /home/alexey/Imágenes/digital-art-abstract-geometry-gaming.jpg
+#feh --bg-scale /home/alexey/Imágenes/3840x2160-among-trees-night-is-coming-4k_1690551937.jpg
+feh --bg-scale /home/alexey/Imágenes/abstract.png
 /home/alexey/.config/polybar/./launch.sh &
 wmname LG3D &
 bspc config border_width 0
+flameshot &
+xsetroot -cursor_name left_ptr &
 #xrandr -s 1920x1080
 #setxkbmap es
