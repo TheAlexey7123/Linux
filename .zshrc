@@ -138,7 +138,7 @@ function rmk(){
 }
 
 #PATH
-export PATH=/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/sbin/:$PATH
+export PATH=/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/sbin/:$PATH
 
 #Bindkeys
 #bindkey "^[[H" beginning-of-line
