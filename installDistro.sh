@@ -160,10 +160,6 @@ sudo mkdir /usr/share/zsh-sudo
 sudo mkdir /usr/share/zsh-autosuggestions/
 sudo mkdir /usr/share/zsh-syntax-highlighting/
 
-sudo chown alexey:alexey /usr/share/zsh-sudo
-sudo chown alexey:alexey /usr/share/zsh-autosuggestions/
-sudo chown alexey:alexey /usr/share/zsh-syntax-highlighting/
-
 sudo cp /home/alexey/Descargas/Linux/sudo.plugin.zsh /usr/share/zsh-sudo
 sudo chmod +x /usr/share/zsh-sudo
 
@@ -172,6 +168,10 @@ sudo chmod +x /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 sudo cp /home/alexey/Descargas/Linux/zsh-autosuggestions.zsh /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 sudo chmod +x /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+sudo chown -R alexey:alexey /usr/share/zsh-sudo
+sudo chown -R alexey:alexey /usr/share/zsh-autosuggestions/
+sudo chown -R alexey:alexey /usr/share/zsh-syntax-highlighting/
 
 #nvim chad:
 sudo mkdir /opt/nvim/
