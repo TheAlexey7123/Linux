@@ -11,7 +11,7 @@ ctrl + b
 
 # program launcher (rofi)
 super + d
-	rofi -show run
+	rofi -font "hack 9" -show drun -icon-theme "Papirus" -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
