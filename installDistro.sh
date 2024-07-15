@@ -224,6 +224,10 @@ mkdir -p /home/alexey/.config/neofetch
 sed -i 's/ascii_distro=.*/ascii_distro="arch"/' ~/.config/neofetch/config.conf
 sed -i 's/ascii_colors=(.*/ascii_colors=(6 6 6 6 6 6)/' ~/.config/neofetch/config.conf
 
+#Grub theme:
+unzip /home/alexey/Descargas/Linux/poly-dark-master.zip
+sudo /home/alexey/Descargas/Linux/poly-dark-master/install.sh
+
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
 cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
