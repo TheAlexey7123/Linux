@@ -5,7 +5,12 @@
 
 #sudo chmod +x /home/alexey/Descargas/Linux/paquetes.sh
 #sudo /home/alexey/Descargas/Linux/paquetes.sh
-su -
+
+if [[ $EUID -ne 0 ]]; then
+   echo "Este script debe ejecutarse como root" 
+   exit 1
+fi
+
 echo "alexey ALL=(ALL:ALL) ALL" >> /etc/sudoers
 echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
 usermod -aG root alexey
