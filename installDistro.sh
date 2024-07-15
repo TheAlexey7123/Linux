@@ -130,14 +130,14 @@ cp /home/alexey/Descargas/blue-sky/nord.rasi /home/alexey/.config/rofi/themes
 
 #PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/alexey/powerlevel10k
-zsh
+
 #p10k configure
 #para reconfigurarlo
 cp /home/alexey/Descargas/Linux/.p10k.zsh /home/alexey/.p10k.zsh
 sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/root/powerlevel10k
 sudo compaudit
 sudo chown root:root /usr/local/share/zsh/site-functions/_bspc
-sudo zsh
+
 sudo usermod --shell /usr/bin/zsh root
 sudo usermod --shell /usr/bin/zsh alexey
 cp /home/alexey/Descargas/Linux/.p10k.zsh /home/root/.p10k.zsh
