@@ -114,7 +114,7 @@ firefox https://code.visualstudio.com/docs/?dv=linux64_deb && sleep 25
 sudo dpkg -i /home/alexey/Descargas/Linux/code_*.deb
 
 #ZSH:
-sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete picom -y
+sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting picom -y
 
 #Polybar
 git clone https://github.com/VaughnValle/blue-sky /home/alexey/Descargas/blue-sky
