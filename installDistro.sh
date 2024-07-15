@@ -223,6 +223,17 @@ wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.5/ob
 sudo dpkg -i /home/alexey/Descargas/obsidian*.deb
 rm /home/alexey/Descargas/obsidian*.deb
 
+#Touch laptop
+echo "Section "InputClass"
+    Identifier "libinput touchpad catchall"
+    MatchIsTouchpad "on"
+    MatchDevicePath "/dev/input/event*"
+    Driver "libinput"
+    Option "Tapping" "on"
+EndSection" | xclip -sel clip
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
+
 #Material-Black-Blueberry
 sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-LA-2.9.9-07.zip -d /usr/share/themes/
 sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-Suru_1.9.3.zip -d /usr/share/icons/
@@ -287,3 +298,4 @@ sudo chmod -R 755 /usr/local/bin
 xrandr -s 1920x1080
 rofi-theme-selector
 lxappearance &>/dev/null & disown
+reboot
