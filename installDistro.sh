@@ -133,14 +133,14 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/alexey/po
 zsh
 #p10k configure
 #para reconfigurarlo
-cp .p10k.zsh /home/alexey/.p10k.zsh
+cp /home/alexey/Descargas/Linux/.p10k.zsh /home/alexey/.p10k.zsh
 sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/root/powerlevel10k
 sudo compaudit
 sudo chown root:root /usr/local/share/zsh/site-functions/_bspc
 sudo zsh
 sudo usermod --shell /usr/bin/zsh root
 sudo usermod --shell /usr/bin/zsh alexey
-cp .p10k.zsh /home/root/.p10k.zsh
+cp /home/alexey/Descargas/Linux/.p10k.zsh /home/root/.p10k.zsh
 
 #Bat Cat
 wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -P /home/alexey/Descargas/
