@@ -163,7 +163,7 @@ sudo mkdir /usr/share/zsh-syntax-highlighting/
 sudo cp /home/alexey/Descargas/Linux/sudo.plugin.zsh /usr/share/zsh-sudo
 sudo chmod +x /usr/share/zsh-sudo
 
-sudo cp /home/alexey/Descargas/Linux/sudo.plugin.zsh /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+sudo cp /home/alexey/Descargas/Linux/zsh-syntax-highlighting.zsh /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 sudo chmod +x /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 sudo cp /home/alexey/Descargas/Linux/zsh-autosuggestions.zsh /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
