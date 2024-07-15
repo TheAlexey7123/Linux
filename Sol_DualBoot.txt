@@ -1,0 +1,10 @@
+#en /etc/default/grub
+#poner esto
+GRUB_DISABLE_OS_PROBER=false
+
+#y luego poner comando 
+os-prober
+
+sudo apt-upgrade
+
+sudo nano /boot/grub/grub.cfg
