@@ -115,7 +115,6 @@ sudo dpkg -i /home/alexey/Descargas/Linux/code_*.deb
 
 #ZSH:
 sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete picom -y
-cp .zshrc /home/alexey/.zshrc
 
 #Polybar
 git clone https://github.com/VaughnValle/blue-sky /home/alexey/Descargas/blue-sky
@@ -142,7 +141,6 @@ sudo chown root:root /usr/local/share/zsh/site-functions/_bspc
 sudo zsh
 sudo usermod --shell /usr/bin/zsh root
 sudo usermod --shell /usr/bin/zsh alexey
-sudo ln -s -f /home/alexey/.zshrc /home/root/.zshrc
 cp .p10k.zsh /home/root/.p10k.zsh
 
 #Bat Cat
@@ -199,3 +197,8 @@ sudo nvim
 
 #Flameshot
 sudo apt install flameshot -y
+
+#Final:
+cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
+cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
+sudo ln -s -f /home/alexey/.zshrc /home/root/.zshrc
