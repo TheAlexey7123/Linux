@@ -8,6 +8,7 @@
 #sudo echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
 
 sudo apt-get update -y
+sudo setxkbmap es
 
 sudo apt install zip nmap net-tools libuv1-dev curl gobuster wfuzz burpsuite build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
 sudo apt install dolphin libxinerama1 zsh libxinerama-dev bspwm -y
@@ -34,17 +35,18 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 #Polybar:
 #sudo apt install cmake cmake-data pkg-config libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libuv1-dev libnl-genl-3-dev -y
-git clone --recursive https://github.com/polybar/polybar /home/alexey/Descargas/
+git clone --recursive https://github.com/polybar/polybar
+mv polybar/* .
+sudo rm -r polybar/
 mkdir /home/alexey/Descargas/polybar/build
-cmake /home/alexey/Descargas/polybar/build/..
-make -j$(nproc) /home/alexey/Descargas/polybar/build
+cmake .
+make -j$(nproc)
 sudo make install /home/alexey/Descargas/polybar/build
 
 #Picom:
 sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y
 git clone https://github.com/ibhagwan/picom.git /home/alexey/Descargas/
 
-#Picom:
 mkdir /home/alexey/.config/picom/
 sudo mkdir /home/root/.config/picom/
 
@@ -175,6 +177,17 @@ sudo wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux6
 sudo tar -xf /opt/nvim/nvim-linux64.tar.gz -C /opt/nvim/
 git clone https://github.com/NvChad/starter ~/.config/nvim
 sudo rm /opt/nvim/nvim-linux64.tar.gz
+wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotus.vim
+wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotusbar.vim
+wget https://raw.githubusercontent.com/Necros1s/lotus/master/init.vim
+
+# Mover archivos descargados al directorio de configuración de nvim
+mv lotus.vim lotusbar.vim init.vim ~/.config/nvim
+
+# Añadir configuraciones al archivo init.vim
+echo 'colorscheme nord' >> ~/.config/nvim/init.vim
+echo 'syntax on' >> ~/.config/nvim/init.vim
+
 nvim
 sudo cp -rf /home/alexey/.config/kitty/* /home/root/.config/kitty/
 sudo nvim
