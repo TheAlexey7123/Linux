@@ -137,6 +137,8 @@ function rmk(){
 	shred -zun 10 -v $1
 }
 
+export TERM=xterm
+
 #PATH
 export PATH=/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
 
