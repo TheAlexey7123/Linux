@@ -133,7 +133,7 @@ chown -R alexey:alexey /usr/share/rofi/themes/
 
 git clone https://github.com/lr-tech/rofi-themes-collection.git
 mkdir -p /home/alexey/.local/share/rofi/themes/
-cp /home/alexey/Descargas/Linux/rofi-themes-collection/* /home/alexey/.local/share/rofi/themes/
+cp -r /home/alexey/Descargas/Linux/rofi-themes-collection/themes/* /home/alexey/.local/share/rofi/themes/
 
 #Papirus-icons:
 sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu jammy main' > /etc/apt/sources.list.d/papirus-ppa.list"
