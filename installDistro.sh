@@ -219,7 +219,10 @@ rm /home/alexey/Descargas/obsidian*.deb
 sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-LA-2.9.9-07.zip -d /usr/share/themes/
 sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-Suru_1.9.3.zip -d /usr/share/icons/
 
-cp -rf 
+#Neofetch:
+mkdir -p /home/alexey/.config/neofetch
+sed -i 's/ascii_distro=.*/ascii_distro="arch"/' ~/.config/neofetch/config.conf
+sed -i 's/ascii_colors=(.*/ascii_colors=(6 6 6 6 6 6)/' ~/.config/neofetch/config.conf
 
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
