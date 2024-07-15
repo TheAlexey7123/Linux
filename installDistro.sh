@@ -216,3 +216,4 @@ sudo chown -R alexey:alexey /home/alexey/
 sudo chmod -R 755 /usr/local/bin
 xrandr -s 1920x1080
 rofi-theme-selector
+lxappearance &>/dev/null & disown
