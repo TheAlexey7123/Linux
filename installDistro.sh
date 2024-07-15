@@ -130,6 +130,7 @@ cp /home/alexey/Descargas/blue-sky/nord.rasi /home/alexey/.config/rofi/themes
 
 #PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/alexey/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/root/powerlevel10k
 
 #p10k configure
 #para reconfigurarlo
