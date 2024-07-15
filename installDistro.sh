@@ -248,7 +248,6 @@ sudo nano /boot/grub/grub.cfg
 #Theme s4vi:
 unzip /home/alexey/Descargas/Linux/Themes.zip
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root
-sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/bspwmrc 
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/scripts/bspwm_resize 
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/ethernet_status.sh
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/htb_status.sh 
@@ -260,17 +259,13 @@ sudo chmod +x /usr/local/bin/screenshot
 # Limpiar viejos dot files
 sudo rm -rf /home/alexey/.p10k.zsh
 sudo rm -rf /root/.p10k.zsh
-sudo rm -rf /home/alexey/.config/bspwm
-sudo rm -rf /home/alexey/.config/bin
-sudo rm -rf /home/alexey/.config/picom
 sudo rm -rf /home/alexey/.config/polybar
-sudo rm -rf /home/alexey/.config/rofi
-sudo rm -rf /home/alexey/.config/Wallpaper
 
 # Mover los nuevos dot files
 sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh /home/alexey/.p10k.zsh
 sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root /root/.p10k.zsh
-sudo cp -rv /home/alexey/Descargas/Linux/Themes/S4vi/Config/* /home/alexey/.config/
+unzip /home/alexey/Descargas/Linux/polybar2.zip -d /home/alexey/.config/polybar/
+unzip /home/alexey/Descargas/Linux/bin.zip -d /home/alexey/.config/bin/
 
 #Permisos:
 chmod +x ~/.config/bspwm/bspwmrc
