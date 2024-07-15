@@ -127,6 +127,15 @@ fc-cache -v
 sudo apt install rofi -y
 mkdir -p /home/alexey/.config/rofi/themes
 cp /home/alexey/Descargas/blue-sky/nord.rasi /home/alexey/.config/rofi/themes
+git clone https://github.com/davatorium/rofi-themes
+sudo cp -rf /home/alexey/Descargas/Linux/rofi-themes/User\ Themes/* /usr/share/rofi/themes
+chown -R alexey:alexey /usr/share/rofi/themes/
+
+#Papirus-icons:
+sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu jammy main' > /etc/apt/sources.list.d/papirus-ppa.list"
+sudo wget -qO /etc/apt/trusted.gpg.d/papirus-ppa.asc 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446FAF0DF770BFC9AE58A9D36647CAE7F'
+sudo apt-get update -y
+sudo apt-get install papirus-icon-theme -y
 
 #PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/alexey/powerlevel10k
@@ -203,10 +212,10 @@ sudo dpkg -i /home/alexey/Descargas/obsidian*.deb
 rm /home/alexey/Descargas/obsidian*.deb
 
 #Material-Black-Blueberry
-unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-LA-2.9.9-07.zip
-unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-Suru_1.9.3.zip 
-sudo cp -rf Material-Black-Blueberry-LA /usr/share/themes/
-sudo cp -rf Material-Black-Blueberry-Suru /usr/share/icons
+sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-LA-2.9.9-07.zip -d /usr/share/themes/
+sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-Suru_1.9.3.zip -d /usr/share/icons/
+
+cp -rf 
 
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
