@@ -203,5 +203,5 @@ cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
 sudo ln -s -f /home/alexey/.zshrc /home/root/.zshrc
 sudo chown -R alexey:alexey /home/alexey/
 sudo chmod -R 755 /usr/local/bin
-
+xrandr -s 1920x1080
 rofi-theme-selector
