@@ -10,7 +10,7 @@ echo "alexey ALL=(ALL:ALL) ALL" >> /etc/sudoers
 echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
 usermod -aG root alexey
 
-su alexey
+su - alexey
 
 sudo apt-get update -y
 sudo setxkbmap es
