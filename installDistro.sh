@@ -257,9 +257,10 @@ sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot 
 
 # Limpiar viejos dot files
-sudo rm -rf /home/alexey/.p10k.zsh
-sudo rm -rf /root/.p10k.zsh
-sudo rm -rf /home/alexey/.config/polybar
+#sudo rm -rf /home/alexey/.p10k.zsh
+#sudo rm -rf /root/.p10k.zsh
+sudo rm -rf /home/alexey/.config/polybar/*
+sudo mkdir /home/alexey/.config/polybar/
 
 # Mover los nuevos dot files
 sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh /home/alexey/.p10k.zsh
