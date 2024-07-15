@@ -127,7 +127,6 @@ fc-cache -v
 sudo apt install rofi -y
 mkdir -p /home/alexey/.config/rofi/themes
 cp /home/alexey/Descargas/blue-sky/nord.rasi /home/alexey/.config/rofi/themes
-rofi-theme-selector
 
 #PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/alexey/powerlevel10k
@@ -203,3 +202,4 @@ cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
 cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
 sudo ln -s -f /home/alexey/.zshrc /home/root/.zshrc
 sudo chown -R alexey:alexey /home/alexey/
+rofi-theme-selector
