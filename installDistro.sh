@@ -131,6 +131,10 @@ git clone https://github.com/davatorium/rofi-themes
 sudo cp -rf /home/alexey/Descargas/Linux/rofi-themes/User\ Themes/* /usr/share/rofi/themes
 chown -R alexey:alexey /usr/share/rofi/themes/
 
+git clone https://github.com/lr-tech/rofi-themes-collection.git
+mkdir /home/alexey/.local/share/rofi/themes/
+cp /home/alexey/Descargas/Linux/rofi-themes-collection/* /home/alexey/.local/share/rofi/themes/
+
 #Papirus-icons:
 sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu jammy main' > /etc/apt/sources.list.d/papirus-ppa.list"
 sudo wget -qO /etc/apt/trusted.gpg.d/papirus-ppa.asc 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446FAF0DF770BFC9AE58A9D36647CAE7F'
