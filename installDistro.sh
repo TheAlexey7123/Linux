@@ -245,6 +245,7 @@ sudo nano /boot/grub/grub.cfg
 #Permisos:
 
 # Cambiar permisos a los archivos necesarios
+#Theme s4vi:
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/bspwmrc 
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/scripts/bspwm_resize 
