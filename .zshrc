@@ -102,6 +102,13 @@ function man() {
     man "$@"
 }
 
+function cleanDocker(){
+ docker rm $(docker ps -a -q) -f
+ docker rmi $(docker images -a -q) -f
+ docker volume rm $(docker volume ls -q)
+ docker network rm $(docker network ls -q)
+}
+
 # fzf improvement
 function fzf-lovely(){
 
