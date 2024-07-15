@@ -7,14 +7,17 @@
 #sudo /home/alexey/Descargas/Linux/paquetes.sh
 #sudo echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
 
-sudo apt install zip nmap curl gobuster wfuzz burpsuite build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
+sudo apt-get update -y
+
+sudo apt install zip nmap net-tools libuv1-dev curl gobuster wfuzz burpsuite build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
 sudo apt install dolphin libxinerama1 zsh libxinerama-dev bspwm -y
+
+   
 
 git clone https://github.com/baskerville/bspwm.git /home/alexey/Descargas/
 git clone https://github.com/baskerville/sxhkd.git /home/alexey/Descargas/
 
-wget https://code.visualstudio.com/docs/?dv=linux64_deb -O /home/alexey/Descargas/
-sudo dpkg -i /home/alexey/Descargas/code_*.deb; rm /home/alexey/Descargas/code_*.deb
+firefox
 
 #BSPWM
 
@@ -100,6 +103,9 @@ cp /home/alexey/Descargas/Linux/*.jpg /home/alexey/Imágenes/
 cp /home/alexey/Descargas/Linux/*.png /home/alexey/Imágenes/
 rm /home/alexey/Descargas/Linux/images.zip
 
+#Code:
+firefox https://code.visualstudio.com/docs/?dv=linux64_deb -O /home/alexey/Descargas/
+sudo dpkg -i /home/alexey/Descargas/code_*.deb; rm /home/alexey/Descargas/code_*.deb
 
 #ZSH:
 sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete picom -y
