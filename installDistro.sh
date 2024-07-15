@@ -132,7 +132,7 @@ sudo cp -rf /home/alexey/Descargas/Linux/rofi-themes/User\ Themes/* /usr/share/r
 chown -R alexey:alexey /usr/share/rofi/themes/
 
 git clone https://github.com/lr-tech/rofi-themes-collection.git
-mkdir /home/alexey/.local/share/rofi/themes/
+mkdir -p /home/alexey/.local/share/rofi/themes/
 cp /home/alexey/Descargas/Linux/rofi-themes-collection/* /home/alexey/.local/share/rofi/themes/
 
 #Papirus-icons:
