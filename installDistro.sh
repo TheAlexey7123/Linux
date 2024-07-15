@@ -227,6 +227,12 @@ sed -i 's/ascii_colors=(.*/ascii_colors=(6 6 6 6 6 6)/' ~/.config/neofetch/confi
 #Grub theme:
 unzip /home/alexey/Descargas/Linux/poly-dark-master.zip
 sudo /home/alexey/Descargas/Linux/poly-dark-master/install.sh
+sudo apt install xclip -y
+echo 'GRUB_CMDLINE_LINUX=""
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"' | xclip -sel clip
+sudo nano /etc/default/grub
+sudo update-grub
+sudo nano /boot/grub/grub.cfg
 
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
