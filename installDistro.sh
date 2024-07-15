@@ -202,3 +202,4 @@ sudo apt install flameshot -y
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
 cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
 sudo ln -s -f /home/alexey/.zshrc /home/root/.zshrc
+sudo chown -R alexey:alexey /home/alexey/
