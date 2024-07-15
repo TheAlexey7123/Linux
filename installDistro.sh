@@ -5,7 +5,10 @@
 
 #sudo chmod +x /home/alexey/Descargas/Linux/paquetes.sh
 #sudo /home/alexey/Descargas/Linux/paquetes.sh
-#sudo echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
+su
+echo "root	ALL=(ALL:ALL) ALL" >> /etc/sudoers
+echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
+su alexey
 
 sudo apt-get update -y
 sudo setxkbmap es
@@ -15,7 +18,7 @@ sudo apt install dolphin libxinerama1 zsh libxinerama-dev bspwm -y
 sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y
 sudo apt install acpi wmname scrub meson caja tmux xclip libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y
 
-firefox
+
 
 #BSPWM
 git clone https://github.com/baskerville/bspwm.git /home/alexey/Descargas/
@@ -105,8 +108,8 @@ cp /home/alexey/Descargas/Linux/*.png /home/alexey/Imágenes/
 rm /home/alexey/Descargas/Linux/images.zip
 
 #Code:
-firefox https://code.visualstudio.com/docs/?dv=linux64_deb -O /home/alexey/Descargas/
-sudo dpkg -i /home/alexey/Descargas/code_*.deb; rm /home/alexey/Descargas/code_*.deb
+firefox https://code.visualstudio.com/docs/?dv=linux64_deb && sleep 25
+sudo dpkg -i /home/alexey/Descargas/Linux/code_*.deb
 
 #ZSH:
 sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete picom -y
