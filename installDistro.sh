@@ -6,8 +6,10 @@
 #sudo chmod +x /home/alexey/Descargas/Linux/paquetes.sh
 #sudo /home/alexey/Descargas/Linux/paquetes.sh
 su
-echo "root	ALL=(ALL:ALL) ALL" >> /etc/sudoers
+echo "alexey ALL=(ALL:ALL) ALL" >> /etc/sudoers
 echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
+usermod -aG root alexey
+
 su alexey
 
 sudo apt-get update -y
