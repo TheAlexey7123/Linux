@@ -197,6 +197,11 @@ sudo nvim
 #Flameshot
 sudo apt install flameshot -y
 
+#Obsidian:
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.5/obsidian-1.6.5-amd64.deb -P /home/alexey/Descargas/
+sudo dpkg -i /home/alexey/Descargas/obsidian*.deb
+rm /home/alexey/Descargas/obsidian*.deb
+
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
 cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
