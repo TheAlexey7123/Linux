@@ -123,6 +123,7 @@ cp -r /home/alexey/Descargas/blue-sky/* /home/alexey/.config/polybar/
 sudo cp -r /home/alexey/.config/polybar/fonts/* /usr/share/fonts/truetype/
 fc-cache -v
 sudo mkdir /root/.config/polybar
+unzip /home/alexey/Descargas/Linux/fuentes.zip -d /home/alexey/Descargas/Linux//usr/share/fonts/truetype/
 
 #Rofi:
 sudo apt install rofi -y
