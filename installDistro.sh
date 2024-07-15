@@ -47,7 +47,7 @@ sudo apt install picom meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-x
 #git clone https://github.com/ibhagwan/picom.git /home/alexey/Descargas/
 
 mkdir /home/alexey/.config/picom/
-sudo mkdir /home/root/.config/picom/
+sudo mkdir -p /home/root/.config/picom/
 
 #git submodule update --init --recursive /home/alexey/Descargas/picom/
 #meson --buildtype=release /home/alexey/Descargas/picom/ build 
