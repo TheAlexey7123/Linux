@@ -202,6 +202,12 @@ wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.5/ob
 sudo dpkg -i /home/alexey/Descargas/obsidian*.deb
 rm /home/alexey/Descargas/obsidian*.deb
 
+#Material-Black-Blueberry
+unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-LA-2.9.9-07.zip
+unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-Suru_1.9.3.zip 
+sudo cp -rf Material-Black-Blueberry-LA /usr/share/themes/
+sudo cp -rf Material-Black-Blueberry-Suru /usr/share/icons
+
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
 cp /home/alexey/Descargas/Linux/.zshrc /home/root/.zshrc
