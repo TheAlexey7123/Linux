@@ -125,6 +125,12 @@ fc-cache -v
 sudo mkdir /root/.config/polybar
 unzip /home/alexey/Descargas/Linux/fuentes.zip -d /home/alexey/Descargas/Linux//usr/share/fonts/truetype/
 
+rm -r /home/alexey/.config/polybar/*
+unzip /home/alexey/Descargas/Linux/polybar.zip -d /home/alexey/.config/polybar/
+
+cp -v $ruta/.p10k.zsh ~/.p10k.zsh
+sudo cp -v $ruta/.p10k.zsh-root /root/.p10k.zsh
+
 #Rofi:
 sudo apt install rofi -y
 mkdir -p /home/alexey/.config/rofi/themes
@@ -235,6 +241,44 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"' | xclip -sel clip
 sudo nano /etc/default/grub
 sudo update-grub
 sudo nano /boot/grub/grub.cfg
+
+#Permisos:
+
+# Cambiar permisos a los archivos necesarios
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/bspwmrc 
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/scripts/bspwm_resize 
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/ethernet_status.sh
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/htb_status.sh 
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/htb_target.sh 
+sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/polybar/launch.sh 
+sudo chmod +x /usr/local/bin/whichSystem.py 
+sudo chmod +x /usr/local/bin/screenshot 
+
+# Limpiar viejos dot files
+sudo rm -rf /home/alexey/.p10k.zsh
+sudo rm -rf /root/.p10k.zsh
+sudo rm -rf /home/alexey/.config/bspwm
+sudo rm -rf /home/alexey/.config/bin
+sudo rm -rf /home/alexey/.config/picom
+sudo rm -rf /home/alexey/.config/polybar
+sudo rm -rf /home/alexey/.config/rofi
+sudo rm -rf /home/alexey/.config/Wallpaper
+
+# Mover los nuevos dot files
+sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh /home/alexey/.p10k.zsh
+sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root /root/.p10k.zsh
+sudo cp -rv /home/alexey/Descargas/Linux/Themes/S4vi/Config/* /home/alexey/.config/
+
+#Permisos:
+chmod +x ~/.config/bspwm/bspwmrc
+chmod +x ~/.config/bspwm/scripts/bspwm_resize
+chmod +x ~/.config/bin/ethernet_status.sh
+chmod +x ~/.config/bin/htb_status.sh
+chmod +x ~/.config/bin/htb_target.sh
+chmod +x ~/.config/polybar/launch.sh
+sudo chmod +x /usr/local/bin/whichSystem.py
+sudo chmod +x /usr/local/bin/screenshot
 
 #Final:
 cp /home/alexey/Descargas/Linux/.zshrc /home/alexey/.zshrc
