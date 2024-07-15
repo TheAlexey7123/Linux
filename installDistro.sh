@@ -224,15 +224,14 @@ sudo dpkg -i /home/alexey/Descargas/obsidian*.deb
 rm /home/alexey/Descargas/obsidian*.deb
 
 #Touch laptop
+sudo mkdir -p /etc/X11/xorg.conf.d
 echo "Section "InputClass"
     Identifier "libinput touchpad catchall"
     MatchIsTouchpad "on"
     MatchDevicePath "/dev/input/event*"
     Driver "libinput"
     Option "Tapping" "on"
-EndSection" | xclip -sel clip
-sudo mkdir -p /etc/X11/xorg.conf.d
-sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
+EndSection" >> /etc/X11/xorg.conf.d/40-libinput.conf
 
 #Material-Black-Blueberry
 sudo unzip /home/alexey/Descargas/Linux/Material-Black-Blueberry-LA-2.9.9-07.zip -d /usr/share/themes/
