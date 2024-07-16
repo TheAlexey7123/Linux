@@ -25,15 +25,36 @@ sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb
 sudo apt install acpi wmname scrub meson caja tmux xclip libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y
 
 #BSPWM
-git clone https://github.com/baskerville/bspwm.git /home/alexey/Descargas/
-git clone https://github.com/baskerville/sxhkd.git /home/alexey/Descargas/
+# Clonar bspwm y sxhkd en el directorio adecuado
+git clone https://github.com/baskerville/bspwm.git /home/alexey/Descargas/Linux/bspwm
+git clone https://github.com/baskerville/sxhkd.git /home/alexey/Descargas/Linux/sxhkd
 
-make /home/alexey/Descargas/bspwm/ && sudo make install /home/alexey/Descargas/bspwm/
-make /home/alexey/Descargas/sxhkd/ && sudo make install /home/alexey/Descargas/sxhkd/
-mkdir  /home/alexey/.config/{bspwm,sxhkd}
-cp /home/alexey/Descargas/Linux/bspwmrc /home/alexey/.config/bspwm/ && sudo chmod +x /home/alexey/.config/bspwm/bspwmrc && mkdir /home/alexey/.config/bspwm/scripts
-cp /home/alexey/Descargas/Linux/bspwm_resize /home/alexey/.config/bspwm/scripts/ && sudo chmod +x /home/alexey/.config/bspwm/scripts/bspwm_resize
-cp /home/alexey/Descargas/Linux/sxhkdrc /home/alexey/.config/sxhkd/ && sudo chmod +x /home/alexey/.config/sxhkd/sxhkdrc
+# Compilar e instalar bspwm
+cd /home/alexey/Descargas/Linux/bspwm
+make
+sudo make install
+
+# Compilar e instalar sxhkd
+cd /home/alexey/Descargas/Linux/sxhkd
+make
+sudo make install
+
+# Crear directorios de configuración para bspwm y sxhkd si no existen
+mkdir -p /home/alexey/.config/{bspwm,sxhkd}
+
+# Copiar archivos de configuración y hacerlos ejecutables
+cp /home/alexey/Descargas/Linux/bspwmrc /home/alexey/.config/bspwm/
+chmod +x /home/alexey/.config/bspwm/bspwmrc
+
+# Crear directorio para scripts de bspwm y copiar script de redimensionamiento
+mkdir -p /home/alexey/.config/bspwm/scripts
+cp /home/alexey/Descargas/Linux/bspwm_resize /home/alexey/.config/bspwm/scripts/
+chmod +x /home/alexey/.config/bspwm/scripts/bspwm_resize
+
+# Copiar archivo de configuración de sxhkd y hacerlo ejecutable
+cp /home/alexey/Descargas/Linux/sxhkdrc /home/alexey/.config/sxhkd/
+chmod +x /home/alexey/.config/sxhkd/sxhkdrc
+cd /home/alexey/Descargas/Linux/
 
 #Docker:
 sudo apt install docker.io -y && sudo service docker start
@@ -110,8 +131,8 @@ cp /home/alexey/Descargas/Linux/*.png /home/alexey/Imágenes/
 rm /home/alexey/Descargas/Linux/images.zip
 
 #Code:
-firefox https://code.visualstudio.com/docs/?dv=linux64_deb && sleep 25
-sudo dpkg -i /home/alexey/Descargas/Linux/code_*.deb
+#firefox https://code.visualstudio.com/docs/?dv=linux64_deb && sleep 25
+#sudo dpkg -i /home/alexey/Descargas/Linux/code_*.deb
 
 #ZSH:
 sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting picom -y
@@ -127,9 +148,6 @@ unzip /home/alexey/Descargas/Linux/fuentes.zip -d /home/alexey/Descargas/Linux//
 
 rm -r /home/alexey/.config/polybar/*
 unzip /home/alexey/Descargas/Linux/polybar.zip -d /home/alexey/.config/polybar/
-
-cp -v $ruta/.p10k.zsh ~/.p10k.zsh
-sudo cp -v $ruta/.p10k.zsh-root /root/.p10k.zsh
 
 #Rofi:
 sudo apt install rofi -y
@@ -151,6 +169,7 @@ sudo apt-get install papirus-icon-theme -y
 
 #PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/alexey/powerlevel10k
+echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 #p10k configure
 #para reconfigurarlo
@@ -161,7 +180,8 @@ sudo chown root:root /usr/local/share/zsh/site-functions/_bspc
 
 sudo usermod --shell /usr/bin/zsh root
 sudo usermod --shell /usr/bin/zsh alexey
-cp /home/alexey/Descargas/Linux/.p10k.zsh /home/root/.p10k.zsh
+
+#cp /home/alexey/Descargas/Linux/.p10k.zsh /home/root/.p10k.zsh
 
 #Bat Cat
 wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -P /home/alexey/Descargas/
@@ -195,25 +215,25 @@ sudo chown -R alexey:alexey /usr/share/zsh-autosuggestions/
 sudo chown -R alexey:alexey /usr/share/zsh-syntax-highlighting/
 
 #nvim chad:
-sudo mkdir /opt/nvim/
-sudo wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz -P /opt/nvim/
-sudo tar -xf /opt/nvim/nvim-linux64.tar.gz -C /opt/nvim/
-git clone https://github.com/NvChad/starter ~/.config/nvim
-sudo rm /opt/nvim/nvim-linux64.tar.gz
-wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotus.vim
-wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotusbar.vim
-wget https://raw.githubusercontent.com/Necros1s/lotus/master/init.vim
+#sudo mkdir /opt/nvim/
+#sudo wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz -P /opt/nvim/
+#sudo tar -xf /opt/nvim/nvim-linux64.tar.gz -C /opt/nvim/
+#git clone https://github.com/NvChad/starter ~/.config/nvim
+#sudo rm /opt/nvim/nvim-linux64.tar.gz
+#wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotus.vim
+#wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotusbar.vim
+#wget https://raw.githubusercontent.com/Necros1s/lotus/master/init.vim
 
 # Mover archivos descargados al directorio de configuración de nvim
-mv lotus.vim lotusbar.vim init.vim ~/.config/nvim
+#mv lotus.vim lotusbar.vim init.vim ~/.config/nvim
 
 # Añadir configuraciones al archivo init.vim
-echo 'colorscheme nord' >> ~/.config/nvim/init.vim
-echo 'syntax on' >> ~/.config/nvim/init.vim
+#echo 'colorscheme nord' >> ~/.config/nvim/init.vim
+#echo 'syntax on' >> ~/.config/nvim/init.vim
 
-nvim
+#nvim
 sudo cp -rf /home/alexey/.config/kitty/* /home/root/.config/kitty/
-sudo nvim
+#sudo nvim
 
 #Flameshot
 sudo apt install flameshot -y
@@ -257,7 +277,7 @@ sudo nano /boot/grub/grub.cfg
 # Cambiar permisos a los archivos necesarios
 #Theme s4vi:
 unzip /home/alexey/Descargas/Linux/Themes.zip
-sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root
+#sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bspwm/scripts/bspwm_resize 
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/ethernet_status.sh
 sudo chmod +x /home/alexey/Descargas/Linux/Themes/S4vi/Config/bin/htb_status.sh 
@@ -267,14 +287,14 @@ sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot 
 
 # Limpiar viejos dot files
-sudo rm -rf /home/alexey/.p10k.zsh
-sudo rm -rf /root/.p10k.zsh
+#sudo rm -rf /home/alexey/.p10k.zsh
+#sudo rm -rf /root/.p10k.zsh
 sudo rm -rf /home/alexey/.config/polybar/*
 sudo mkdir /home/alexey/.config/polybar/
 
 # Mover los nuevos dot files
-sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh /home/alexey/.p10k.zsh
-sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root /root/.p10k.zsh
+#sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh /home/alexey/.p10k.zsh
+#sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root /root/.p10k.zsh
 unzip /home/alexey/Descargas/Linux/polybar2.zip -d /home/alexey/.config/polybar/
 unzip /home/alexey/Descargas/Linux/bin.zip -d /home/alexey/.config/bin/
 
@@ -295,6 +315,5 @@ sudo ln -s -f /home/alexey/.zshrc /home/root/.zshrc
 sudo chown -R alexey:alexey /home/alexey/
 sudo chmod -R 755 /usr/local/bin
 xrandr -s 1920x1080
-rofi-theme-selector
 lxappearance &>/dev/null & disown
 reboot
