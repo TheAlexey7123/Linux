@@ -144,8 +144,8 @@ export PATH=/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuite
 #bindkey "^[[1;3D" backward-word
 
 #With ctrl+arrows
-#bindkey "\e[1;5C" forward-word
-#bindkey "\e[1;5D" backward-word
+#bindkey "\e[1;3C" forward-word
+#bindkey "\e[1;3D" backward-word
 
 ## ctrl+delete
 bindkey "\e[3;5~" kill-word
