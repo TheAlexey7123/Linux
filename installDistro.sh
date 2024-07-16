@@ -6,18 +6,18 @@
 #sudo chmod +x /home/alexey/Descargas/Linux/paquetes.sh
 #sudo /home/alexey/Descargas/Linux/paquetes.sh
 
-if [[ $EUID -ne 0 ]]; then
-   echo "Este script debe ejecutarse como root" 
-   exit 1
-fi
+#if [[ $EUID -ne 0 ]]; then
+ #  echo "Este script debe ejecutarse como root" 
+  # exit 1
+#fi
 
-echo "alexey ALL=(ALL:ALL) ALL" >> /etc/sudoers
-echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
-usermod -aG root alexey
-su - alexey
+#echo "alexey ALL=(ALL:ALL) ALL" >> /etc/sudoers
+#echo "alexey ALL=(ALL) NOPASSWD: /sbin/shutdown" >> /etc/sudoers
+#usermod -aG root alexey
+#su - alexey
 
-sudo apt-get update -y
-sudo setxkbmap es
+#sudo apt-get update -y
+#sudo setxkbmap es
 
 sudo apt install apache2 sshpass xinput pavucontrol php python3 nano gparted thunar lxappearance neofetch htop zip tree nmap x11-xserver-utils net-tools libuv1-dev curl gobuster wfuzz build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
 sudo apt install dolphin libxinerama1 zsh libxinerama-dev bspwm -y
