@@ -62,6 +62,18 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias burpsuite='BurpSuiteCommunity'
 
+#python:
+alias python='python3'
+
+function sudo() {
+    if [[ $1 == "python" ]]; then
+        shift
+        command sudo python3 "$@"
+    else
+        command sudo "$@"
+    fi
+}
+
 #function burpsuite(){
  #/usr/local/bin/BurpSuiteCommunity
 #}
