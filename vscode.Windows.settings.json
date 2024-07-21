@@ -1,0 +1,64 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "workbench.preferredDarkColorTheme": "Vue Theme",
+    "workbench.preferredLightColorTheme": "Vue Theme",
+    "workbench.preferredHighContrastColorTheme": "Vue Theme",
+    "diffEditor.codeLens": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.defaultLanguage": "Español",
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-19",
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Night Wolf (dark blue)",
+    "tabnine.experimentalAutoImports": true,
+    "editor.fontWeight": "550",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 15,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.codeActionsOnSave": {},
+    "workbench.editor.enablePreview": false,
+    "editor.fontFamily": "'Cascadia Font'",
+    "terminal.explorerKind": "external",
+    "workbench.editor.empty.hint": "hidden",
+    "editor.cursorBlinking": "expand",
+    "editor.guides.bracketPairs": true,
+    "editor.linkedEditing": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+}
+/*{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "'Hack Nerd Font'",
+    "editor.fontSize": 18,
+    "editor.fontWeight": "bold",
+    "editor.lineHeight": 24,
+    "workbench.colorTheme": "Night Wolf (dark blue)",
+  
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+  
+      "[html]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+  "[css]": {
+          "editor.defaultFormatter": "michelemelluso.code-beautifier"
+      },
+    },
+    "haskell.manageHLS": "GHCup"
+  
+    
+  }
+
+  */
