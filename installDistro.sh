@@ -292,6 +292,13 @@ sudo chmod +x /usr/local/bin/screenshot
 sudo rm -rf /home/alexey/.config/polybar/*
 sudo mkdir /home/alexey/.config/polybar/
 
+#Instalar Seclists:
+wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -P /home/alexey/Descargas/Linux/SecList.zip \
+  && unzip SecList.zip \
+  && rm -f SecList.zip
+mv SecLists-master SecList                        
+sudo mv SecList /usr/share/
+
 # Mover los nuevos dot files
 #sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh /home/alexey/.p10k.zsh
 #sudo cp -v /home/alexey/Descargas/Linux/Themes/S4vi/.p10k.zsh-root /root/.p10k.zsh
