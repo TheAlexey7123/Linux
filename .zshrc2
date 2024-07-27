@@ -65,6 +65,13 @@ alias burpsuite='BurpSuiteCommunity'
 #python:
 alias python='python3'
 
+#searchsploit error:
+alias searchsploit='searchsploit 2>/dev/null'
+
+#grep color
+alias grep='grep --color=always'
+export GREP_COLORS='ms=1;38;2;0;255;115'
+
 function sudo() {
     if [[ $1 == "python" ]]; then
         shift
@@ -155,7 +162,7 @@ function rmk(){
 export TERM=xterm
 
 #PATH
-export PATH=/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
+export PATH=/usr/local/sbin:/sbin:/bin:/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
 
 #Bindkeys
 #bindkey "^[[H" beginning-of-line
