@@ -37,8 +37,9 @@ git clone https://github.com/namhyung/uftrace /opt/uftrace
 sudo /opt/uftrace/misc/install-deps.sh -y
 sudo /opt/uftrace/configure
 cd /opt/uftrace/
-make
-make install
+sudo make
+sudo make install
+cd /home/alexey/Descargas/Linux/
 
 #BSPWM
 # Clonar bspwm y sxhkd en el directorio adecuado
