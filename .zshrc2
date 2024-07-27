@@ -71,6 +71,7 @@ alias searchsploit='searchsploit 2>/dev/null'
 #grep color
 alias grep='grep --color=always'
 export GREP_COLORS='ms=1;38;2;0;255;115'
+#https://askubuntu.com/questions/1042234/modifying-the-color-of-grep
 
 function sudo() {
     if [[ $1 == "python" ]]; then
