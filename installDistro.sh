@@ -32,6 +32,14 @@ sudo apt install acpi wmname scrub meson caja tmux xclip libxext-dev libxcb1-dev
 sudo git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploitdb 
 sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 
+#uftrace:
+git clone https://github.com/namhyung/uftrace /opt/uftrace
+sudo /opt/uftrace/misc/install-deps.sh -y
+sudo /opt/uftrace/configure
+cd /opt/uftrace/
+make
+make install
+
 #BSPWM
 # Clonar bspwm y sxhkd en el directorio adecuado
 git clone https://github.com/baskerville/bspwm.git /home/alexey/Descargas/Linux/bspwm
