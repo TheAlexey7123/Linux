@@ -27,6 +27,12 @@ sudo apt install acpi wmname scrub meson caja tmux xclip libxext-dev libxcb1-dev
 #sudo snap install searchsploit
 #sudo snap install exploitdb-papers
 #sudo snap install exploitdb-bin-sploits
+sudo apt install gpgv2 autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel zlib1g zlib1g-dev curl -y
+
+#Instalar metasploit:
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+chmod 755 msfinstall
+./msfinstall
 
 #Instalar searchsploit:
 sudo git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploitdb 
