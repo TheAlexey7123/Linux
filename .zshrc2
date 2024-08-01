@@ -64,6 +64,7 @@ alias burpsuite='BurpSuiteCommunity'
 
 #python:
 alias python='python3'
+alias impacket-smbserver='smbserver.py'
 
 #searchsploit error:
 alias searchsploit='searchsploit 2>/dev/null'
@@ -217,3 +218,8 @@ if [ "$(id -u)" -eq 0 ]; then
 fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#595d7a,bg=default"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Created by `pipx` on 2024-08-01 17:25:40
+export PATH="$PATH:/home/alexey/.local/bin"
