@@ -37,6 +37,13 @@ chmod 755 msfinstall
 
 #impacket-smbserver:
 sudo apt-get install python3-impacket python3-full -y
+sudo git clone https://github.com/SecureAuthCorp/impacket.git
+python3 -m pipx install impacket
+cd impacket/
+sudo python3 -m pipx install . --force
+pipx ensurepath
+
+cd /home/alexey/Descargas/Linux/
 
 #Instalar searchsploit:
 sudo git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploitdb 
