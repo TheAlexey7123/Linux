@@ -18,6 +18,7 @@
 
 #sudo apt-get update -y
 #sudo setxkbmap es
+sudo apt update -y
 sudo apt install python3-pip python3-venv -y
 sudo apt-get install -y snapd make hollywood openssh-server tshark wireshark build-essential autoconf automake libtool pkg-config libnl-3-dev libnl-genl-3-dev libssl-dev ethtool shtool rfkill zlib1g-dev libpcap-dev libsqlite3-dev libpcre2-dev libhwloc-dev libcmocka-dev hostapd wpasupplicant tcpdump screen iw usbutils expect
 sudo apt install openvpn apache2 ftp smbclient aircrack-ng sshpass masscan jq nodejs npm arp-scan xinput pavucontrol php python3 nano gparted thunar lxappearance neofetch htop zip tree nmap x11-xserver-utils net-tools libuv1-dev curl gobuster wfuzz build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
