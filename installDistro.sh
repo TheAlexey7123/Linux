@@ -42,6 +42,7 @@ python3 -m pipx install impacket
 cd impacket/
 sudo python3 -m pipx install . --force
 pipx ensurepath
+sudo echo "alexey ALL=(ALL) NOPASSWD: /home/alexey/.local/bin/smbserver.py" > /etc/sudoers
 
 cd /home/alexey/Descargas/Linux/
 
