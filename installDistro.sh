@@ -33,6 +33,9 @@ sudo apt install gpgv2 autoconf bison build-essential postgresql libaprutil1 lib
 sudo gem install wpscan
 sudo apt install mariadb-server -y
 
+#Para configurar maria-db:
+#sudo mysql_secure_installation
+
 #Instalar metasploit:
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod 755 msfinstall
