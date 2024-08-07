@@ -29,7 +29,7 @@ sudo apt install curl git libcurl4-openssl-dev make zlib1g-dev gawk g++ gcc libr
 #sudo snap install searchsploit
 #sudo snap install exploitdb-papers
 #sudo snap install exploitdb-bin-sploits
-sudo apt install gpgv2 autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel zlib1g zlib1g-dev curl -y
+sudo apt install gpgv2 macchanger autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel zlib1g zlib1g-dev curl -y
 sudo gem install wpscan
 sudo apt install mariadb-server -y
 
