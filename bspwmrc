@@ -25,7 +25,8 @@ picom &
 #feh --bg-scale /home/alexey/Imágenes/hogwarts-legacy.jpg
 #feh --bg-scale /home/alexey/Imágenes/digital-art-abstract-geometry-gaming.jpg
 #feh --bg-scale /home/alexey/Imágenes/3840x2160-among-trees-night-is-coming-4k_1690551937.jpg
-feh --bg-scale /home/alexey/Imágenes/abstract.png
+#feh --bg-scale /home/alexey/Imágenes/abstract.png
+feh --bg-scale /home/alexey/Imágenes/archLinuxBlueGreen.png
 /home/alexey/.config/polybar/./launch.sh &
 wmname LG3D &
 bspc config border_width 0
