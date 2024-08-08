@@ -1,6 +1,6 @@
 #to reset:
 #pkill -USR1 -x sxhkd
-#mirar xev
+
 #to see keys:
 #xmodmap -pm
 #
@@ -144,10 +144,12 @@ alt + super + {Left,Down,Up,Right}
 
 #Brightness(needs brightnessctl)
 #higher
-F10
+#F10
+XF86MonBrightnessUp
 	brightnessctl set +5%	
 #lower
-F9
+#F9
+XF86MonBrightnessDown
         brightnessctl set 5%-
 
 #Volumen(needs alsa-utils)
