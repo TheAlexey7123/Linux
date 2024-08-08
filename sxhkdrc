@@ -1,3 +1,8 @@
+#to reset:
+#pkill -USR1 -x sxhkd
+
+#to see keys:
+#xmodmap -pm
 #
 # wm independent hotkeys
 #
@@ -18,14 +23,17 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 #file explorer
-	thunar .
+super + e
+#	 ~/launch_thunar.sh
+	/usr/bin//thunar
 
 #
 # bspwm hotkeys
 #
 
 #flameshot
-super + shift + c
+#super + shift + c
+Print
 	flameshot gui
 
 # quit/restart bspwm
@@ -81,7 +89,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
+mod1 + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
@@ -134,10 +142,23 @@ super + {Left,Down,Up,Right}
 alt + super + {Left,Down,Up,Right}
 	/home/alexey/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
 
-#Brightness(needs xbacklight)
+#Brightness(needs brightnessctl)
+#higher
+F10
+	brightnessctl set +5%	
 #lower
-f9
-	xbacklight -dec 10
-#more
-f10
-	xbacklight -inc 10
+F9
+        brightnessctl set 5%-
+
+#Volumen(needs alsa-utils)
+# Bajar el volumen
+F2
+    amixer -D pulse sset Master 5%-
+
+# Subir el volumen
+F3
+    amixer -D pulse sset Master 5%+
+
+# Silenciar/Desilenciar
+F1
+    amixer -D pulse sset Master toggle
