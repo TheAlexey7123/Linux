@@ -1,6 +1,6 @@
 #to reset:
 #pkill -USR1 -x sxhkd
-
+#mirar xev
 #to see keys:
 #xmodmap -pm
 #
@@ -152,13 +152,16 @@ F9
 
 #Volumen(needs alsa-utils)
 # Bajar el volumen
-F2
+#Fn + F2
+XF86AudioLowerVolume
     amixer -D pulse sset Master 5%-
 
 # Subir el volumen
-F3
+XF86AudioRaiseVolume
+#F3
     amixer -D pulse sset Master 5%+
 
 # Silenciar/Desilenciar
-F1
+XF86AudioMute
+#F1
     amixer -D pulse sset Master toggle
