@@ -225,6 +225,11 @@ sudo usermod --shell /usr/bin/zsh alexey
 
 #cp /home/alexey/Descargas/Linux/.p10k.zsh /home/root/.p10k.zsh
 
+#JDK Java:
+wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb -P /home/alexey/Descargas
+sudo dpkg -i /home/alexey/Descargas/jdk-22_linux-x64_bin.deb
+rm /home/alexey/jdk-22_linux-x64_bin.deb
+
 #Bat Cat
 wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -P /home/alexey/Descargas/
 sudo dpkg -i /home/alexey/Descargas/bat_0.24.0_amd64.deb
