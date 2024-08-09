@@ -65,6 +65,11 @@ sudo make
 sudo make install
 cd /home/alexey/Descargas/Linux/
 
+#gdb-peda:
+sudo apt install gdb -y
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+
 #BSPWM
 # Clonar bspwm y sxhkd en el directorio adecuado
 git clone https://github.com/baskerville/bspwm.git /home/alexey/Descargas/Linux/bspwm
