@@ -1,8 +1,11 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 echo ""
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -44,8 +47,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #ls_colors
 export LS_COLORS="rs=0:di=34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
 
-#ruta: /root/.p10k.zsh
-
 # Custom Aliases
 # -----------------------------------------------
 # bat
@@ -60,6 +61,32 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias burpsuite='BurpSuiteCommunity'
+
+#python:
+alias python='python3'
+alias impacket-smbserver='smbserver.py'
+
+#searchsploit error:
+alias searchsploit='searchsploit 2>/dev/null'
+
+#ghidra:
+alias ghidra='/opt/ghidra_11.1.2/ghidraRun'
+
+#grep color
+alias grep='grep --color=always'
+export GREP_COLORS='ms=1;38;2;224;36;104'
+#export GREP_COLORS='ms=1;38;2;99;56;255'
+#export GREP_COLORS='ms=1;38;2;0;255;115'
+#https://askubuntu.com/questions/1042234/modifying-the-color-of-grep
+
+function sudo() {
+    if [[ $1 == "python" ]]; then
+        shift
+        command sudo python3 "$@"
+    else
+        command sudo "$@"
+    fi
+}
 
 #function burpsuite(){
  #/usr/local/bin/BurpSuiteCommunity
@@ -76,9 +103,19 @@ function extractPorts(){
 	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
 	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
 	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
-	echo $ports | tr -d '\n' | xclip -sel clip
+	echo $ports | tr -d "\n" | xclip -sel clip
 	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
 	cat extractPorts.tmp; rm extractPorts.tmp
+}
+
+function settarget(){
+ ip_address=$1
+ machine=$2
+ echo "$ip_address $machine" > /home/alexey/.config/bin/target
+}
+
+function cleartarget(){
+ echo "" > /home/alexey/.config/bin/target
 }
 
 # Set 'man' colors
@@ -132,7 +169,7 @@ function rmk(){
 export TERM=xterm
 
 #PATH
-export PATH=/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
+export PATH=/usr/local/sbin:/sbin:/bin:/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
 
 #Bindkeys
 #bindkey "^[[H" beginning-of-line
@@ -144,8 +181,8 @@ export PATH=/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuite
 #bindkey "^[[1;3D" backward-word
 
 #With ctrl+arrows
-#bindkey "\e[1;3C" forward-word
-#bindkey "\e[1;3D" backward-word
+#bindkey "\e[1;5C" forward-word
+#bindkey "\e[1;5D" backward-word
 
 ## ctrl+delete
 bindkey "\e[3;5~" kill-word
@@ -156,8 +193,10 @@ bindkey '^H' backward-kill-word
 ### ctrl+shift+delete
 bindkey "\e[3;6~" kill-line
 
-bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-word
+#bindkey '^[[1;5D' backward-word
+#bindkey '^[[1;5C' forward-word
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 # configure key keybindings
 bindkey -e                                        # emacs key bindings
@@ -172,4 +211,21 @@ bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
+source /home/alexey/powerlevel10k/powerlevel10k.zsh-theme
+#source /root/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f /home/alexey/.p10k.zsh ]] || source /home/alexey/.p10k.zsh
 
+if [ "$(id -u)" -eq 0 ]; then
+      source /root/.p10k.zsh
+fi
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#595d7a,bg=default"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Created by `pipx` on 2024-08-01 17:25:40
+export PATH="$PATH:/home/alexey/.local/bin"
+
+# Created by `pipx` on 2024-08-01 17:32:29
+export PATH="$PATH:/root/.local/bin"
