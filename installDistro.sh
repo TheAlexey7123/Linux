@@ -230,6 +230,12 @@ wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb -P /hom
 sudo dpkg -i /home/alexey/Descargas/jdk-22_linux-x64_bin.deb
 rm /home/alexey/jdk-22_linux-x64_bin.deb
 
+#Ghidra NSA:
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.1.2_build/ghidra_11.1.2_PUBLIC_20240709.zip -P /home/alexey/Descargas
+unzip ghidra_11.1.2_PUBLIC_20240709.zip -d /home/alexey/Descargas
+mv /home/alexey/Descargas/ghidra_11.1.2_PUBLIC_20240709 /home/alexey/Descargas/ghidra_11.1.2
+sudo mv /home/alexey/Descargas/ghidra_11.1.2 /opt/ghidra_11.1.2
+
 #Bat Cat
 wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -P /home/alexey/Descargas/
 sudo dpkg -i /home/alexey/Descargas/bat_0.24.0_amd64.deb
@@ -279,6 +285,7 @@ sudo chown -R alexey:alexey /usr/share/zsh-syntax-highlighting/
 #echo 'syntax on' >> ~/.config/nvim/init.vim
 
 #nvim
+
 sudo cp -rf /home/alexey/.config/kitty/* /home/root/.config/kitty/
 #sudo nvim
 
