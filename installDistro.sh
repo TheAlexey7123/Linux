@@ -230,6 +230,18 @@ sudo usermod --shell /usr/bin/zsh alexey
 
 #cp /home/alexey/Descargas/Linux/.p10k.zsh /home/root/.p10k.zsh
 
+#install python2.7:
+wget http://python.org/ftp/python/2.7.0/Python-2.7.0.tgz -P /home/alexey/Descargas/Linux/
+cd /home/alexey/Descargas/Linux/
+7z x /home/alexey/Descargas/Linux/Python-2.7.0.tgz
+7z x /home/alexey/Descargas/Linux/Python-2.7.0.tar
+#tar xf Python-2.7.0.tar.xz
+cd Python-2.7.0
+chmod +x configure
+./configure --prefix=/usr/local --enable-unicode=ucs4 --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
+make && make altinstall
+cd /home/alexey/Descargas/Linux/
+
 #JDK Java:
 wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb -P /home/alexey/Descargas
 sudo dpkg -i /home/alexey/Descargas/jdk-22_linux-x64_bin.deb
