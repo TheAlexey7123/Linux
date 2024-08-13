@@ -239,7 +239,7 @@ cd /home/alexey/Descargas/Linux/
 cd Python-2.7.0
 chmod +x configure
 ./configure --prefix=/usr/local --enable-unicode=ucs4 --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
-make && make altinstall
+sudo make && sudo make altinstall
 cd /home/alexey/Descargas/Linux/
 
 #JDK Java:
