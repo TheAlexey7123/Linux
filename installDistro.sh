@@ -123,6 +123,9 @@ sudo apt install picom meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-x
 mkdir /home/alexey/.config/picom/
 sudo mkdir -p /home/root/.config/picom/
 
+#ssh2john:
+sudo wget https://github.com/openwall/john/blob/bleeding-jumbo/run/ssh2john.py -P /opt/
+
 #git submodule update --init --recursive /home/alexey/Descargas/picom/
 #meson --buildtype=release /home/alexey/Descargas/picom/ build 
 #ninja -C build /home/alexey/Descargas/picom/
