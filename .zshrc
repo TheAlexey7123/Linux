@@ -66,6 +66,9 @@ alias burpsuite='BurpSuiteCommunity'
 alias python='python3'
 alias impacket-smbserver='smbserver.py'
 
+#ssh2john:
+alias ssh2john='sudo python2.7 /opt/ssh2john.py'
+
 #searchsploit error:
 alias searchsploit='searchsploit 2>/dev/null'
 
