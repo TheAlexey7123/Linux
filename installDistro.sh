@@ -32,7 +32,36 @@ sudo apt install curl alsa-utils john html2text brightnessctl flameshot git libc
 sudo apt install gpgv2 macchanger autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel zlib1g zlib1g-dev curl -y
 sudo gem install wpscan
 sudo apt install mariadb-server -y
-sudo apt install linux-cpupower -y
+sudo apt install linux-cpupower tlp -y
+sudo tlp start
+
+#Mejorar rendimiento sin cable:
+#echo "CPU_SCALING_GOVERNOR_ON_BAT=performance" >> /etc/tlp.conf
+#echo "CPU_BOOST_ON_BAT=1" >> /etc/tlp.conf
+#echo "PCIE_ASPM_ON_BAT=performance" >> /etc/tlp.conf
+#echo "WIFI_PWR_ON_BAT=off" >> /etc/tlp.conf
+
+#sudo nano /etc/systemd/system/cpupower.service
+
+#[Unit]
+#Description=Set CPU governor to performance
+
+#[Service]
+#Type=oneshot
+#ExecStart=/usr/bin/cpupower frequency-set -g performance
+
+#[Install]
+#WantedBy=multi-user.target
+
+#sudo systemctl enable cpupower.service
+#sudo systemctl start cpupower.service
+
+#En firefox:
+#Ve a about:config y busca gfx.webrender.all. Configura esta opción en true.
+#Abre Firefox y ve a about:preferences en la barra de direcciones.
+#Desplázate hasta la sección "Rendimiento".
+#Desmarca la opción "Usar la configuración de rendimiento recomendada".
+#Aumenta el número de procesos de contenido. Por defecto, Firefox lo establece en 4, pero puedes incrementarlo a 8 o más si tienes suficiente RAM (más procesos pueden mejorar la velocidad de carga, pero también consumirán más memoria).
 
 #Para configurar maria-db:
 #sudo mysql_secure_installation
