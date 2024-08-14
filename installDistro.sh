@@ -32,6 +32,7 @@ sudo apt install curl alsa-utils john html2text brightnessctl flameshot git libc
 sudo apt install gpgv2 macchanger autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel zlib1g zlib1g-dev curl -y
 sudo gem install wpscan
 sudo apt install mariadb-server -y
+sudo apt install linux-cpupower -y
 
 #Para configurar maria-db:
 #sudo mysql_secure_installation
