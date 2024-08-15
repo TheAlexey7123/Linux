@@ -334,6 +334,8 @@ sudo chown -R alexey:alexey /usr/share/zsh-syntax-highlighting/
 #sudo tar -xf /opt/nvim/nvim-linux64.tar.gz -C /opt/nvim/
 #git clone https://github.com/NvChad/starter ~/.config/nvim
 #sudo rm /opt/nvim/nvim-linux64.tar.gz
+#sudo mkdir /root/.config/nvim
+#sudo cp -r /home/alexey/.config/nvim/ /root/.config/nvim/
 #wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotus.vim
 #wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotusbar.vim
 #wget https://raw.githubusercontent.com/Necros1s/lotus/master/init.vim
