@@ -66,6 +66,17 @@ sudo tlp start
 #Para configurar maria-db:
 #sudo mysql_secure_installation
 
+#Install latex:
+sudo apt install latexmk zathura texlive-full -y 
+sudo xdg-mime query default application/pdf
+sudo xdg-mime default zathura.desktop application/pdf
+mkdir /home/alexey/.config/latexmk/
+sudo mkdir /root/.config/latexmk/
+touch /home/alexey/.config/latexmk/latexmkrc
+sudo touch /root/.config/latexmk/latexmkrc
+echo '$pdf_previewer = "zathura";' >> /home/alexey/.config/latexmk/latexmkrc
+sudo ln -s -f /home/alexey/.config/latexmk/latexmkrc /root/.config/latexmk/latexmkrc
+
 #Instalar metasploit:
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod 755 msfinstall
@@ -333,8 +344,6 @@ sudo chown -R alexey:alexey /usr/share/zsh-syntax-highlighting/
 # Añadir configuraciones al archivo init.vim
 #echo 'colorscheme nord' >> ~/.config/nvim/init.vim
 #echo 'syntax on' >> ~/.config/nvim/init.vim
-
-#nvim
 
 sudo cp -rf /home/alexey/.config/kitty/* /home/root/.config/kitty/
 #sudo nvim
