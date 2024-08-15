@@ -172,7 +172,7 @@ function rmk(){
 export TERM=xterm
 
 #PATH
-export PATH=/usr/local/sbin:/sbin:/bin:/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
+export PATH=/opt/nvim/nvim-linux64/bin:/usr/local/sbin:/sbin:/bin:/usr/local/bin:/opt/:/opt/nvim-linux64/bin/:/usr/local/bin/BurpSuiteCommunity:/usr/bin/:/usr/sbin/:$PATH
 
 #Bindkeys
 #bindkey "^[[H" beginning-of-line
