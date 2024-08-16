@@ -78,6 +78,7 @@ echo '$pdf_previewer = "zathura";' >> /home/alexey/.config/latexmk/latexmkrc
 sudo ln -s -f /home/alexey/.config/latexmk/latexmkrc /root/.config/latexmk/latexmkrc
 
 #Nano:
+mv /home/alexey/Descargas/Linux/nanorc /home/alexey/Descargas/Linux/.nanorc
 mv /home/alexey/Descargas/Linux/.nanorc /home/alexey/
 sudo ln -s -f /home/alexey/.nanorc /root/.nanorc
 
