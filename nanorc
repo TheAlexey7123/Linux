@@ -1,0 +1,134 @@
+set autoindent
+set trimblanks
+#set smooth
+#set nowrap
+#set linenumbers
+# Non-default settings
+set atblanks        # wrap line at blanks.
+set cutfromcursor   # CTRL+K cuts from cursor position to end of line.
+#set nohelp          # Disable the help information (CTRL+G to view the help screen).
+set softwrap        # Enable softwrap of lines.
+#set suspend         # Enables CTRL+Z to suspend nano.
+set tabsize 4       # Sets tab-to-spaces size to 4.
+set tabstospaces    # Converts TAB key press to spaces.
+include "/usr/share/nano/*.nanorc" # Enables the syntax highlighting.
+set speller "aspell -x -c"         # Sets what spelling utility to use.
+set constantshow    # Displays useful information e.g. line number and position in the bottom bar.
+set linenumbers     # Lines are numbered.
+set casesensitive   # Case insensitive search.
+set historylog      # Save the last 100 history searches for later use.
+set positionlog     # Saves the cursor position between editing sessions.
+set zap             # Allows you to highlight text (CTRL+SHIFT+ARROW) and delete it with backspace.
+set autoindent      # A new line will have the same number of leading spaces as the previous one.
+#set indicator       # Displays a scroll bar on the right that shows the position and size of the current view port.
+#set minibar         # Displays file name and other information in the bottom bar. Removes top bar.
+set quickblank ## Constantly display the cursor position in the statusbar.  Note that this overrides "quickblank". 
+# Enable and set a working backup directory
+#set backup                              # Creates backups of your current file.
+#set backupdir "~/.cache/nano/backups/"  # The location of the backups.
+set smarthome
+
+# syntax highlighting in xorg.conf
+###########################################
+syntax "xorg" "xorg\.conf$"
+color brightwhite "(Section|EndSection|Sub[sS]ection|EndSub[sS]ection)"
+# keywords
+color yellow "[^A-Za-z0-9](Identifier|Screen|InputDevice|Option|RightOf|LeftOf|Driver|RgbPath|FontPath|ModulePath|Load|VendorName|ModelName|BoardName|BusID|Device|Monitor|DefaultDepth|View[pP]ort|Depth|Virtual|Modes|Mode|DefaultColorDepth|Modeline|\+vsync|\+hsync|HorizSync|VertRefresh)[^A-Za-z0-9]"
+# numbers
+color magenta "[0-9]"
+# strings
+color green ""(\\.|[^\"])*""
+# comments
+color blue "#.*"
+
+
+###########################################
+## ini highlighting
+###########################################
+syntax "ini" "\.ini(\.old|~)?$"
+# values
+color brightred "=.*$"
+# equal sign
+color green "="
+# numbers
+color brightblue "-?[0-9\.]+\s*($|;)"
+# ON/OFF
+color brightmagenta "ON|OFF|On|Off|on|off\s*($|;)"
+# sections
+color brightcyan "^\s*\[.*\]"
+# keys
+color cyan "^\s*[a-zA-Z0-9_\.]+"
+# comments
+color brightyellow ";.*$"
+
+## Nanorc files
+include "/usr/share/nano/nanorc.nanorc"
+
+## C/C++
+include "/usr/share/nano/c.nanorc"
+
+## Cascading Style Sheets
+include "/usr/share/nano/css.nanorc"
+
+## Debian files
+include "/usr/share/nano/debian.nanorc"
+
+## Gentoo files
+##include "/usr/share/nano/gentoo.nanorc"
+
+## HTML
+include "/usr/share/nano/html.nanorc"
+
+## PHP
+include "/usr/share/nano/php.nanorc"
+
+## TCL
+include "/usr/share/nano/tcl.nanorc"
+
+## TeX
+include "/usr/share/nano/tex.nanorc"
+
+## Quoted emails (under e.g. mutt)
+##include "/usr/share/nano/mutt.nanorc"
+
+## Patch files
+include "/usr/share/nano/patch.nanorc"
+
+## Manpages
+include "/usr/share/nano/man.nanorc"
+
+## Groff
+include "/usr/share/nano/groff.nanorc"
+
+## Perl
+include "/usr/share/nano/perl.nanorc"
+
+## Python
+include "/usr/share/nano/python.nanorc"
+
+## Ruby
+include "/usr/share/nano/ruby.nanorc"
+
+## Java
+include "/usr/share/nano/java.nanorc"
+
+## AWK
+include "/usr/share/nano/awk.nanorc"
+
+## Assembler
+include "/usr/share/nano/asm.nanorc"
+
+## Bourne shell scripts
+include "/usr/share/nano/sh.nanorc"
+
+## POV-Ray
+##include "/usr/share/nano/pov.nanorc"
+
+## XML-type files
+include "/usr/share/nano/xml.nanorc"
+
+# Shortcut key bindings
+bind ^C copy main       # CTRC+C - Copy
+bind ^V paste all       # CTRL+V - Past
+bind ^F whereis all     # CTRL+F - Find
+bind ^S savefile main   # CTRL+S - Save
