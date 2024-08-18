@@ -98,6 +98,11 @@ sudo echo "alexey ALL=(ALL) NOPASSWD: /home/alexey/.local/bin/smbserver.py" >> /
 
 cd /home/alexey/Descargas/Linux/
 
+#Chisel:
+wget https://github.com/jpillora/chisel/releases/download/v1.10.0/chisel_1.10.0_linux_amd64.deb -P /home/alexey/Descargas/Linux/
+sudo dpkg -i /home/alexey/Descargas/Linux/chisel_1.10.0_linux_amd64.deb
+rm /home/alexey/Descargas/Linux/chisel_1.10.0_linux_amd64.deb
+
 #Instalar searchsploit:
 sudo git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploitdb 
 sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
