@@ -110,6 +110,19 @@ sudo git clone https://github.com/OWASP/joomscan /opt/joomscan
 sudo git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploitdb 
 sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 
+#http3:
+git clone --recursive https://github.com/cloudflare/quiche /home/alexey/Descargas/Linux/
+cd /home/alexey/Descargas/Linux/quiche
+sudo apt install cargo -y
+sudo apt remove rustc -y
+curl https://sh.rustup.rs -sSf | sh
+source "$HOME/.cargo/env"
+rustup update
+cargo build --examples
+cargo test
+
+cd /home/alexey/Descargas/Linux/
+
 #uftrace:
 git clone https://github.com/namhyung/uftrace /opt/uftrace
 sudo /opt/uftrace/misc/install-deps.sh -y
