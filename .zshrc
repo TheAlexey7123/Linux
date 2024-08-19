@@ -66,6 +66,9 @@ alias burpsuite='BurpSuiteCommunity'
 alias python='python3'
 alias impacket-smbserver='smbserver.py'
 
+#joomscan:
+alias joomscan='sudo perl /opt/joomscan/joomscan.pl'
+
 #ssh2john:
 alias ssh2john='sudo python2.7 /opt/ssh2john.py'
 
