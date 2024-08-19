@@ -103,6 +103,9 @@ wget https://github.com/jpillora/chisel/releases/download/v1.10.0/chisel_1.10.0_
 sudo dpkg -i /home/alexey/Descargas/Linux/chisel_1.10.0_linux_amd64.deb
 rm /home/alexey/Descargas/Linux/chisel_1.10.0_linux_amd64.deb
 
+#Joomscan:
+sudo git clone https://github.com/OWASP/joomscan /opt/joomscan
+
 #Instalar searchsploit:
 sudo git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploitdb 
 sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
