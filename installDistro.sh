@@ -77,6 +77,13 @@ sudo touch /root/.config/latexmk/latexmkrc
 echo '$pdf_previewer = "zathura";' >> /home/alexey/.config/latexmk/latexmkrc
 sudo ln -s -f /home/alexey/.config/latexmk/latexmkrc /root/.config/latexmk/latexmkrc
 
+#firepwd:
+git clone https://github.com/lclevy/firepwd /home/alexey/Descargas/Linux/
+sudo apt install python3-pyasn1
+sudo apt install python3-pyasn
+sudo apt install python3-pycryptodome
+chmod +x /home/alexey/Descargas/Linux/firepwd.py
+
 #Nano:
 mv /home/alexey/Descargas/Linux/nanorc /home/alexey/Descargas/Linux/.nanorc
 mv /home/alexey/Descargas/Linux/.nanorc /home/alexey/
